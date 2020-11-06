@@ -20,7 +20,10 @@ export class StuffList extends LitElement {
       ul li:before {
         font-weight: bold;
       }
+
       .delete {
+        visibility: hidden;
+        opacity: 0;
         display: block;
         position: absolute;
         right: 0;
@@ -33,9 +36,14 @@ export class StuffList extends LitElement {
         border: 4px solid black;
         text-transform: uppercase;
         cursor: pointer;
+        transition: all 0.11s ease-out;
       }
       .delete:hover {
         background-color: palevioletred;
+      }
+      ul li:hover .delete {
+        visibility: visible;
+        opacity: 1;
       }
       .add-item {
         text-align: center;
@@ -56,6 +64,7 @@ export class StuffList extends LitElement {
         background-color: brown;
         cursor: pointer;
         font-weight: 900;
+        transition: all 0.11s ease-out;
       }
       .add-item__button:hover {
         color: black;
@@ -90,7 +99,7 @@ export class StuffList extends LitElement {
                   @click=${() => this.delete(index)}
                   part="button"
                 >
-                  delete
+                  GET RID OF IT!
                 </button>
               </li>
             `
@@ -104,7 +113,7 @@ export class StuffList extends LitElement {
           placeholder="Missing something?"
           @change=${(event) => (this.newItem = event.target.value)}
         /><button class="add-item__button" @click=${this.addItem} part="button">
-          ADD!
+          THROW IT THERE!
         </button>
       </section>
     `;
