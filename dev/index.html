@@ -1,20 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>&lt;my-element> Demo</title>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../src/my-stuff.js"></script>
+    <script type="module" src="../src/stuff-list.js"></script>
     <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
+      body {
+        background-color: darkgray;
+        padding: 1rem;
+        font-family: 'Red Hat Text', serif;
       }
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <section>
+      <h1>Document Root</h1>
+    </section>
+    <my-stuff name="Leroy Jenkins"></my-stuff>
   </body>
 </html>
