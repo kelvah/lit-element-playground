@@ -2,3 +2,6 @@
 
 # only generated for size check
 my-element.bundled.js
+
+# IDE
+.idea
